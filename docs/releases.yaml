@@ -9,7 +9,7 @@
     - name: bucketrepo
       url: http://bucketrepo-jx.change.me/
     - name: hook
-      url: http://480343a1ecd6.ngrok.io/hook
+      url: http://685422099d59.ngrok.io/hook
     name: jxboot-helmfile-resources
     repositoryName: jx3
     repositoryUrl: https://storage.googleapis.com/jenkinsxio/charts
