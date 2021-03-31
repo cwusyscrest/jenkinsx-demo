@@ -30,8 +30,11 @@ jxRequirements:
     gitName: github
     gitServer: https://github.com
     provider: minikube
+    registry: 10.99.194.12
   environments:
   - key: dev
+    owner: cwusyscrest
+    repository: jenkinsx-demo
   - key: staging
   - key: production
   ingress:
@@ -43,6 +46,8 @@ jxRequirements:
       email: ""
       enabled: false
       production: false
+  pipelineUser:
+    username: mygituser
   repository: bucketrepo
   secretStorage: local
   vault: {}
