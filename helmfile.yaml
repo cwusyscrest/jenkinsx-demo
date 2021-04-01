@@ -2,7 +2,9 @@ filepath: ""
 helmfiles:
 - path: helmfiles/jx/helmfile.yaml
 - path: helmfiles/tekton-pipelines/helmfile.yaml
-templates: {}
-renderedvalues: {}
 releases:
 - chart: ./charts/tidb-operator
+  name: charts
+  namespace: jx
+templates: {}
+renderedvalues: {}
