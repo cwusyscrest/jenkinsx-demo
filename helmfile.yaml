@@ -4,3 +4,5 @@ helmfiles:
 - path: helmfiles/tekton-pipelines/helmfile.yaml
 templates: {}
 renderedvalues: {}
+releases:
+- chart: ./charts/tidb-operator
