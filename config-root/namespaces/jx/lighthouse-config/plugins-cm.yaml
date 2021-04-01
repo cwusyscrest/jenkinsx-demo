@@ -6,6 +6,10 @@ data:
       repos:
       - cwusyscrest/jenkinsx-demo
       require_self_approval: true
+    - lgtm_acts_as_approve: true
+      repos:
+      - cwusyscrest/jenkinsx-python
+      require_self_approval: true
     cat: {}
     cherry_pick_unapproved: {}
     config_updater:
@@ -19,6 +23,9 @@ data:
       cwusyscrest/jenkinsx-demo:
       - endpoint: http://cd-indicators.jx.svc.cluster.local/lighthouse/events
         name: cd-indicators
+      cwusyscrest/jenkinsx-python:
+      - endpoint: http://cd-indicators.jx.svc.cluster.local/lighthouse/events
+        name: cd-indicators
     heart: {}
     label:
       additional_labels: null
@@ -26,6 +33,22 @@ data:
     plugins:
       cwusyscrest/jenkinsx-demo:
       - config-updater
+      - approve
+      - assign
+      - blunderbuss
+      - help
+      - hold
+      - lgtm
+      - lifecycle
+      - override
+      - size
+      - trigger
+      - wip
+      - heart
+      - cat
+      - dog
+      - pony
+      cwusyscrest/jenkinsx-python:
       - approve
       - assign
       - blunderbuss
@@ -53,6 +76,11 @@ data:
     - repos:
       - cwusyscrest/jenkinsx-demo
       trusted_org: todo
+    - repos:
+      - cwusyscrest/jenkinsx-python
+      trusted_org: todo
+    welcome:
+    - message_template: Welcome
 kind: ConfigMap
 metadata:
   creationTimestamp: null

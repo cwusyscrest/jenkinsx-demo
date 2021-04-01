@@ -1,0 +1,22 @@
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  creationTimestamp: null
+  labels:
+    owner: cwusyscrest
+    provider: github
+    repository: jenkinsx-python
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  name: cwusyscrest-jenkinsx-python
+  namespace: jx
+spec:
+  httpCloneURL: https://github.com/cwusyscrest/jenkinsx-python.git
+  org: cwusyscrest
+  provider: https://github.com
+  providerKind: github
+  providerName: github
+  repo: jenkinsx-python
+  scheduler:
+    kind: ""
+    name: in-repo
+  url: https://github.com/cwusyscrest/jenkinsx-python
